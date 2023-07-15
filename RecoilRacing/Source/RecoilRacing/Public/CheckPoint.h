@@ -16,6 +16,11 @@ class RECOILRACING_API ACheckPoint : public ATriggerSphere
 public:
 	UFUNCTION(BlueprintCallable)
 	bool TryActivate();
+	UFUNCTION(BlueprintCallable)
+	bool IsActive() 
+	{
+		return bActivated;
+	}
 protected:
 	UPROPERTY(BlueprintReadOnly)
 	bool bActivated;
