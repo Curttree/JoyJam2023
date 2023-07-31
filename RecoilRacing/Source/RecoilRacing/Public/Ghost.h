@@ -26,10 +26,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-public:
-	// Likely shouldn't be public. Will move later (time permitting).
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<FVector4> GhostPositions;
+	UFUNCTION(BlueprintCallable)
+	TArray<FVector4> GetGhostPositions() {
+		return GhostPositions;
+	}
 protected:
 	UPROPERTY(BlueprintReadOnly)
 	int CurrentTargetIndex;
@@ -37,4 +37,6 @@ protected:
 	float NextTargetUpdateTime;
 	UPROPERTY(BlueprintReadOnly)
 	FVector NextTargetPosition;
+	UPROPERTY(BlueprintReadWrite)
+	TArray<FVector4> GhostPositions;
 };
