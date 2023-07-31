@@ -7,7 +7,7 @@
 #include "Ghost.generated.h"
 
 UCLASS()
-class RECOILRACING_API AGhost : public AActor
+class RECOILRACING_API AGhost : public APawn
 {
 	GENERATED_BODY()
 	
