@@ -90,6 +90,9 @@ void ARecoilRacingCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 
 void ARecoilRacingCharacter::Move(const FInputActionValue& Value)
 {
+
+	if (!DebugControlEnabled)
+		return;
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
 

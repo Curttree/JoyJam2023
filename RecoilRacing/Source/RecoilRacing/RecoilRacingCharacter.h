@@ -37,6 +37,9 @@ class ARecoilRacingCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
+	UPROPERTY(BlueprintReadWrite, Category = Input, meta = (AllowPrivateAccess = "true"))
+	bool DebugControlEnabled = false;
+
 public:
 	ARecoilRacingCharacter();
 	
